@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --light: hsl(0, 0%, 95%);
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+p {
+    line-height: 1.68;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+h3 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+
+    text-transform: uppercase;
+    color: var(--light);
+    margin: 2.25rem 0 0.625rem;
+}
+
+body {
+    background-color: var(--light);
+    padding: 5.5rem 1.5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 3rem;
+
+    --color: unset;
+    background-color: var(--color);
+}
+
+.card.sedan {
+    --color: hsl(31, 77%, 52%);
+}
+
+.card.suv {
+    --color: hsl(184, 100%, 22%);
+}
+
+.card.luxury {
+    --color: hsl(179, 100%, 13%);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.learn-more {
+    padding: 0.92em 2.125em;
+    border-radius: 100vh;
+    text-decoration: none;
+    background-color: var(--light);
+    color: var(--color);
+}
+
+.learn-more:after {
+    content: "Learn More"
+}
+
+
+@media (min-width: 950px) {
+    body {
+        padding: 0;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        width: 920px;
+        height: 500px;
+    }
+
+    p {
+        margin-bottom: 5.125rem;
+    }
+}
