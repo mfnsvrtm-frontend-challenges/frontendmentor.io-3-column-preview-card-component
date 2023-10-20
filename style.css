@@ -95,6 +95,7 @@ p {
         grid-template-columns: repeat(3, 1fr);
         width: 920px;
         height: 500px;
+        margin-top: 2.625rem;
     }
 
     p {
